@@ -107,6 +107,9 @@ lista.addEventListener("click", (ev) => {
   if (btn.classList.contains("btn-mas")) valor +=0.1;
   if (btn.classList.contains("btn-menos")) valor -=0.1;
 
+  valor=Math.max(0,Math.min(10,valor));
+  valor=Math.round(valor*10)/10;
+
   estado.set(nombre, valor);
   span.dataset.valor = String(valor);
   span.textContent = valor;
