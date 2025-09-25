@@ -105,7 +105,7 @@ lista.addEventListener("click", (ev) => {
   let valor = Number(span.dataset.valor || "10");
 
   if (btn.classList.contains("btn-mas")) valor +=0.1;
-  if (btn.classList.contains("btn-menos")) valor -= 0.1;
+  if (btn.classList.contains("btn-menos")) valor -=0.1;
 
   estado.set(nombre, valor);
   span.dataset.valor = String(valor);
